@@ -10,7 +10,7 @@ RUN apt update && apt install -y --fix-missing python3 python3-pip
 
 RUN apt install -y locales locales-all fonts-noto language-pack-zh-hans
 
-RUN curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py -o install-poetry.py
+RUN python3 -m pip install poetry playwright
 
 RUN echo "Install playwright headless browser..." \
   && playwright install chromium \
