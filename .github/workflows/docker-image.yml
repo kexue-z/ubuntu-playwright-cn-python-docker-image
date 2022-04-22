@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file dockerfile --tag xana278:ubuntu-playwrigt-python
     - name: Login
-      run: docker login - u {{ $DOCKER_USERNAME }} -p {{ $DOCKER_PASSWORD }}
+      run: docker login - u ${{ DOCKER_USERNAME }} -p ${{ DOCKER_PASSWORD }}
     - name: Publish
       run: docker publish xana278:ubuntu-playwrigt-python
