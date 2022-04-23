@@ -1,4 +1,4 @@
-FROM docker.io/library/ubuntu:latest
+FROM ubuntu:latest
 
 ENV LANG zh_CN.UTF-8
 ENV LANGUAGE zh_CN.UTF-8
