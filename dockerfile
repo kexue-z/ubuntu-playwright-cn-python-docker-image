@@ -10,6 +10,9 @@ RUN apt update && apt install -y --fix-missing python3 python3-pip locales local
 
 RUN python3 -m pip install poetry playwright \
   && playwright install chromium \
-  && apt-get install -y libnss3-dev libxss1 libasound2 libxrandr2\
-  libatk1.0-0 libgtk-3-0 libgbm-dev libxshmfence1
+  && apt-get install -y libnss3-dev libxss1 libasound2 libxrandr2 \
+  libatk1.0-0 libgtk-3-0 libgbm-dev libxshmfence1 \
+  && apt clean autoclean \
+  && apt autoremove -y \
+  && rm -rf /var/lib/apt/lists/*
 
