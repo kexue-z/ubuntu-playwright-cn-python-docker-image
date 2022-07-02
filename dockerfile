@@ -16,7 +16,7 @@ RUN apt install -y tzdata \
     && dpkg-reconfigure -f noninteractive tzdata 
 
 RUN python3 -m pip install poetry playwright \
-    && playwright install chromium \
+    && playwright install firefox \
     && apt-get install -y libnss3-dev libxss1 libasound2 libxrandr2 \
     libatk1.0-0 libgtk-3-0 libgbm-dev libxshmfence1 \
     && apt clean autoclean \
